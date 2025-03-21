@@ -9,4 +9,11 @@ def fitness(chromosome):
         for j in range(i + 1, n):
             if chromosome[i] == chromosome[j] or abs(chromosome[i] - chromosome[j]) == abs(i - j):
                 conflicts += 1
-     return -conflicts  
+     return -conflicts
+
+def probability(population):
+    fitness_values = [fitness(ch) for ch in population]
+    total_fitness = sum(fitness_values)
+    probabilities = [f / total_fitness for f in fitness_values]
+    return probabilities     
+  
