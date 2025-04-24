@@ -21,3 +21,11 @@ def probability(population):
 
 def random_pick(population, probabilities):
     return random.choices(population, weights=probabilities, k=1)[0]
+
+
+
+def cross_over(parent1, parent2):
+    n = len(parent1)
+    point = random.randint(1, n-2)
+    return parent1[:point] + parent2[point:]
+
