@@ -17,3 +17,7 @@ def probability(population):
     probabilities = [f / total_fitness for f in fitness_values]
     return probabilities     
   
+
+
+def random_pick(population, probabilities):
+    return random.choices(population, weights=probabilities, k=1)[0]
