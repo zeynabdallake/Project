@@ -29,3 +29,11 @@ def cross_over(parent1, parent2):
     point = random.randint(1, n-2)
     return parent1[:point] + parent2[point:]
 
+
+
+def mutate(chromosome, mutation_rate=0.1):
+    n = len(chromosome)
+    if random.random() < mutation_rate:   #با یک احتمال کوچک  مقداری در کروموزوم را تغییر می‌دهد.
+        i = random.randint(0, n-1)
+        chromosome[i] = random.randint(0, n-1)
+    return chromosome
