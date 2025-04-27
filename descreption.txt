@@ -1,0 +1,3 @@
+ create The 8-minister problem using genetic algorithm
+Calculating the fitness function
+Calculate the probability of each chromosome being selected to produce the next generation.
