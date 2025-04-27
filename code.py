@@ -61,3 +61,16 @@ def genetic_queen(n, population_size=100, generations=1000, mutation_rate=0.1):
                 return chromosome, generation
 
     return None, generations
+
+
+
+
+solution, gen = genen = 4 # تعداد وزیرها
+tic_queen(n)
+if solution:
+    print(f"Solution found in generation {gen}: {solution}")
+else:
+    print("No solution found!")
+
+
+print('test')
