@@ -1,3 +1,8 @@
- create The 8-minister problem using genetic algorithm
+create The 8-minister problem using genetic algorithm
 Calculating the fitness function
 Calculate the probability of each chromosome being selected to produce the next generation.
+GHOLAMI:
+I added a function calle random_choose which selects a chromosome from the population based on calculated probabili ties
+I added the function to combine two chromosomes (Crossover). Combines two parents and produces a new child.
+ Adding a Mutation Function
+
