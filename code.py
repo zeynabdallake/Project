@@ -36,4 +36,23 @@ def mutate(chromosome, mutation_rate=0.1):
     if random.random() < mutation_rate:   #با یک احتمال کوچک  مقداری در کروموزوم را تغییر می‌دهد.
         i = random.randint(0, n-1)
         chromosome[i] = random.randint(0, n-1)
-    return chromosome
+
+
+
+
+def genetic_queen(n, population_size=100, generations=1000, mutation_rate=0.1):
+    population = [random_chromosome(n) for _ in range(population_size)]
+    for generation in range(generations):
+        probabilities = probability(population)
+        new_population = []
+        for _ in range(population_size):
+            parent1 = random_pick(population, probabilities)
+            parent2 = random_pick(population, probabilities)
+            child = cross_over(parent1, parent2)
+            child = mutate(child, mutation_rate)
+            new_population.append(child)
+        population = new_population
+         # بررسی کروموزوم بدون برخورد
+        for chromosome in population:
+            if fitness(chromosome) == 0:
+                return chromosome, generation    return chromosome
