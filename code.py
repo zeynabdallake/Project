@@ -56,3 +56,8 @@ def genetic_queen(n, population_size=100, generations=1000, mutation_rate=0.1):
         for chromosome in population:
             if fitness(chromosome) == 0:
                 return chromosome, generation    return chromosome
+ for chromosome in population:
+            if fitness(chromosome) == 0:
+                return chromosome, generation
+
+    return None, generations
